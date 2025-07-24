@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general del sitio */
+body {
+    padding-top: 90px;
+    background: linear-gradient(to bottom, #E8F5E9, #F5F1E6);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER PRINCIPAL */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(34, 39, 38, 0.7);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    padding: 0.3rem 2rem;
+}
+
+/* NAV */
+.main-header__navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+}
+
+/* LOGO */
+.main-header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 5px 7px rgba(244, 182, 0, 0.3));
+}
+
+.main-header__logo img {
+    height: 60px;
+    width: 185px;
+    transition: transform 0.3s ease;
+}
+
+/* MENÚ GENERAL */
+.main-header__menu {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-header__menu li {
+    margin: 0;
+}
+
+/* LINKS */
+.main-header__menu li a {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-header__menu li a.active {
+    color: #f9a825;
+    font-weight: 600;
+}
+
+/* HOVER SUBRAYADO */
+.main-header__menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    opacity: 0.8;
+    background-color: #f9a825;
+    transition: width 0.3s ease;
+}
+
+.main-header__menu li a:hover::after {
+    width: 100%;
+}
+
+.main-header__menu li a:hover {
+    color: #f9a825;
+}
+
+/* Ajustes específicos para los menús laterales */
+.main-header__menu--left {
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.main-header__menu--right {
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 2rem;
+    position: relative;
+    gap: 1.5rem; /* Espacio entre elementos */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2c5282; /* O el color que prefieras */
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Espacio adicional arriba del botón */
+}
+
+.btn-hero:hover {
+    background-color: #2a4365; /* Un tono más oscuro para el hover */
+}
+
+/* Secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a3b5d;
+}
+
+.section-img,
+.section__img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+}
+
+/* Mapa */
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.map-card {
+    margin: 0 auto;
+    max-width: 1200px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    height: 400px;  /* Altura mínima necesaria */
+    width: 100%;
+}
